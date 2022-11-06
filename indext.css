@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+}
+
+body {
+    position: relative;
+    background-color: #4C1D95;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.in-container {
+    padding: 4rem 3.5rem;
+    position: relative;
+    height: 550px;
+    width: 550px;
+    background-color: #1F2937;
+    border-radius: 10px;
+}
+
+/* RGB */
+
+.in-container::after,
+.in-container::before {
+    position: absolute;
+    content: '';
+    top: -5px;
+    left: -5px;
+    width: calc(550px + 10px);
+    height: calc(550px + 10px);
+    background: linear-gradient(45deg, #881337, #6D28D9, #4C1D95, #881337, #6D28D9, #4C1D95);
+    background-size: 200%;
+    z-index: -1;
+    border-radius: inherit;
+    animation: animate 1.5s infinite linear;
+}
+
+.in-container::before {
+    filter: blur(20px);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* Content */
+h1 {
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+    font-size: 2.5rem;
+    line-height: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+span {
+    color: #10B981;
+}
+
+p {
+    color: #D5D4D8;
+    font-size: 1.3rem;
+    margin-bottom: 2.9rem;
+}
+
+.btn {
+    border: none;
+    background-color: #10B981;
+    color: #FFFFFF;
+    padding: .8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(45deg, #881337, #6D28D9, #4C1D95, #881337, #6D28D9, #4C1D95);
+    background-size: 400%;
+    margin-bottom: 2.5rem;
+    animation: animate 5s infinite linear;
+}
+
+
+.pw-area {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pw-area .save {
+    width: calc(95% / 2);
+    height: 2.5rem;
+    background-color: #273549;
+    color: #10B981;
+    text-align: center;
+}
+
+.pw-area .save:hover {
+    cursor: pointer;
+}
